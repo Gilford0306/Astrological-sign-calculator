@@ -40,7 +40,19 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 1;
-
+            this.comboBox2.Items.Add("Январь");
+            this.comboBox2.Items.Add("Февраль");
+            this.comboBox2.Items.Add("Март");
+            this.comboBox2.Items.Add("Апрель");
+            this.comboBox2.Items.Add("Май");
+            this.comboBox2.Items.Add("Июнь");
+            this.comboBox2.Items.Add("Июль");
+            this.comboBox2.Items.Add("Август");
+            this.comboBox2.Items.Add("Сентабрь");
+            this.comboBox2.Items.Add("Октябрь");
+            this.comboBox2.Items.Add("Ноябрь");
+            this.comboBox2.Items.Add("Ноябрь");
+            this.comboBox2.Items.Add("Декабрь");
             // 
             // comboBox1
             // 
@@ -49,6 +61,8 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 0;
+            for (int i = 1; i <= 31; i++)
+            { this.comboBox1.Items.Add(i.ToString()); }
             // 
             // label1
             // 
