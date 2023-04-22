@@ -1,4 +1,6 @@
-﻿namespace Astrological_sign_calculator
+﻿using System.Windows.Forms.VisualStyles;
+
+namespace Astrological_sign_calculator
 {
     partial class Form1
     {
@@ -30,8 +32,9 @@
         {
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+
             // 
             // comboBox2
             // 
@@ -61,15 +64,31 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 0;
+            for (int i = 1; i <= 31; i++)
+            { this.comboBox1.Items.Add(i.ToString()); }
             // 
             // label1
             // 
+
+
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(351, 179);
+            this.label1.Location = new System.Drawing.Point(350, 207);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = string.Empty;
+            this.label1.TabIndex = 0;
+            this.label1.Text = "";
+
+
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(330, 147);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "calculate";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += Button1_Click;
             // 
             // Form1
             // 
@@ -79,11 +98,20 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            this.Text = "Astro Sign";
 
+
+
+        }
+
+        private void Button1_Click(object sender, System.EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0 && comboBox2.SelectedIndex == 0)
+            {
+                this.label1.Text = "Овен";            
+            }
         }
 
         #endregion
@@ -91,6 +119,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
